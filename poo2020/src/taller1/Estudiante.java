@@ -7,7 +7,7 @@ public class Estudiante {
     private String genero;
     private String nacionalidad;
     private String institucion;
-    private int curso;
+    private String curso;
     private double nota;
 
     /**
@@ -56,7 +56,7 @@ public class Estudiante {
      * Metodo para obtener el curso
      * @return this.curso
      */
-    public int obtenerCurso(){
+    public String obtenerCurso(){
         return this.curso;
     }
 
@@ -112,7 +112,7 @@ public class Estudiante {
      * Metodo para actualizar el curso;
      * @param curso
      */
-    public void actualizarCurso(int curso) {
+    public void actualizarCurso(String curso) {
         this.curso = curso;
     }
 
