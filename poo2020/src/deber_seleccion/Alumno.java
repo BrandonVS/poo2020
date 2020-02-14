@@ -12,11 +12,11 @@ public class Alumno {
 
     /**
      * Metodo para la clase Alumno
-     * @param nombre
-     * @param nota1
-     * @param nota2
-     * @param nota3
-     * @param nota4
+     * @param nombre Nombre del estudiante
+     * @param nota1 Primera nota
+     * @param nota2 Segunda nota
+     * @param nota3 Tercera nota
+     * @param nota4 Cuarta nota
      */
     public Alumno(String nombre, double nota1, double nota2, double nota3, double nota4){
         this.setNombre(nombre);
@@ -36,7 +36,7 @@ public class Alumno {
 
     /**
      * Metodo para actualizar el nombre
-     * @param nombre
+     * @param nombre Nombre del estudiante
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -52,7 +52,7 @@ public class Alumno {
 
     /**
      * Metodo para actualizar la nota 1
-     * @param nota1
+     * @param nota1 Primera nota
      */
     public void setNota1(double nota1) {
         this.nota1 = nota1;
@@ -68,7 +68,7 @@ public class Alumno {
 
     /**
      * Metodo para actualizar la nota 2
-     * @param nota2
+     * @param nota2 Segunda nota
      */
     public void setNota2(double nota2) {
         this.nota2 = nota2;
