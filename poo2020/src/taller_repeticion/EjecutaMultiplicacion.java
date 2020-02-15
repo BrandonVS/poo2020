@@ -1,3 +1,8 @@
+/*
+    Luis Quizhpe
+    Jorge Flores
+    Brandon Vega
+*/
 package taller_repeticion;
 
 import java.util.Scanner;

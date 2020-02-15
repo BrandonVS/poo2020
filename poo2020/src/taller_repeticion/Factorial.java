@@ -1,3 +1,8 @@
+/*
+    Luis Quizhpe
+    Jorge Flores
+    Brandon Vega
+*/
 package taller_repeticion;
 
 public class Factorial {
