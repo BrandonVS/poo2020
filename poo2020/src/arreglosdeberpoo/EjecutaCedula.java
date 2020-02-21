@@ -7,7 +7,7 @@ public class EjecutaCedula {
         char [] aux1;
         int [] aux2 = new int[10];
 
-        System.out.println("Ingrese su cedula digito por digito: ");
+        System.out.println("Ingrese su cedula: ");
         String ident = scanner.nextLine();
 
         aux1 = ident.toCharArray();
@@ -15,11 +15,7 @@ public class EjecutaCedula {
             aux2[i] = Character.getNumericValue(aux1[i]);
         }
         cedula.setCedula(aux2);
-
-        if(cedula.getValidez() == aux2[9]){
-            System.out.println("La cedula: "+ident+" es valida.");
-        }else{
-            System.out.println("La cedula: "+ident+" no es valida");
-        }
+        cedula.setIdent(ident);
+        System.out.println(cedula.getReporte());
     }
 }
