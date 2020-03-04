@@ -21,8 +21,8 @@ public class EmpAdmvo extends Empleado {
     }
 
     /**
-     * Metodo para obtener el sueldo
-     * @return sueldo
+     * Metodo para obtener el sueldoQuincena
+     * @return sueldoQuincena
      */
     public double getSueldo() {
         return sueldo;

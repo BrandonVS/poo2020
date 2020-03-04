@@ -37,7 +37,7 @@ public class EjecutaEmpleado {
                     departamento = scanner.nextLine();
                     System.out.println("Ingrese el puesto: ");
                     puesto = scanner.nextLine();
-                    System.out.println("Ingrese el sueldo mensual: ");
+                    System.out.println("Ingrese el sueldoQuincena mensual: ");
                     sueldoMensual = scanner.nextDouble();
                     scanner.nextLine();
 

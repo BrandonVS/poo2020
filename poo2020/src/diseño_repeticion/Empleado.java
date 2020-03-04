@@ -1,6 +1,6 @@
 package diseño_repeticion;
 
-public class Empleado {
+class Empleado {
     private int horas;
     private int cuota;
     private String nombre;
@@ -67,16 +67,16 @@ public class Empleado {
     }
 
     /**
-     * Metodo para obtener el valor del sueldo
-     * @return sueldo
+     * Metodo para obtener el valor del sueldoQuincena
+     * @return sueldoQuincena
      */
     public int getSueldo() {
         return sueldo;
     }
 
     /**
-     * Metodo para calcular el valor del sueldo
-     * @return sueldo
+     * Metodo para calcular el valor del sueldoQuincena
+     * @return sueldoQuincena
      */
     public int calcularSueldo() {
         if(horas <= 40){
@@ -87,8 +87,8 @@ public class Empleado {
     }
 
     /**
-     * Metodo para actualizar el valor del sueldo
-     * @param sueldo sueldo del empleado
+     * Metodo para actualizar el valor del sueldoQuincena
+     * @param sueldo sueldoQuincena del empleado
      */
     public void setSueldo(int sueldo) {
         this.sueldo = sueldo;

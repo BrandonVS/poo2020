@@ -1,26 +1,15 @@
-package herenciaautomotriz;
+package polimorfismopoo;
 
-class Empleado {
-    protected String rfc;
+public abstract class Empleado2 {
     protected String nombre;
-    protected String departamento;
+    protected String depar;
     protected String puesto;
+    protected double sueldoQuincena;
 
     /**
-     * Metodo para obtener el RFC
-     * @return rfc
+     * Metodo abstracto que sera implementado dentro de las clases hijas
      */
-    public String getRfc() {
-        return rfc;
-    }
-
-    /**
-     * Metodo para actualizar el RFC
-     * @param rfc
-     */
-    public void setRfc(String rfc) {
-        this.rfc = rfc;
-    }
+    public abstract void calcularSueldoQuincena();
 
     /**
      * Metodo para obtener el nombre
@@ -40,18 +29,18 @@ class Empleado {
 
     /**
      * Metodo para obtener el departamento
-     * @return
+     * @return depar
      */
-    public String getDepartamento() {
-        return departamento;
+    public String getDepar() {
+        return depar;
     }
 
     /**
      * Metodo para actualizar el departamento
-     * @param departamento
+     * @param depar
      */
-    public void setDepartamento(String departamento) {
-        this.departamento = departamento;
+    public void setDepar(String depar) {
+        this.depar = depar;
     }
 
     /**

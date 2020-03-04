@@ -1,6 +1,6 @@
 package deber_seleccion;
 
-public class Empleado {
+class Empleado {
     private String nombre;
     private double horas;
     private double cuota;
@@ -66,8 +66,8 @@ public class Empleado {
     }
 
     /**
-     * Metodo para calcular y obtener el sueldo
-     * @return sueldo
+     * Metodo para calcular y obtener el sueldoQuincena
+     * @return sueldoQuincena
      */
     public double obtenerSueldo(){
         double sueldo;

@@ -41,9 +41,9 @@ public class EmpleadoPorHora extends Empleado {
     }
 
     /**
-     * Metodo para calcular el sueldo
+     * Metodo para calcular el sueldoQuincena
      *
-     * @return sueldo
+     * @return sueldoQuincena
      */
     public double calcularSueldo() {
         sueldo = hora * valorHora;

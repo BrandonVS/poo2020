@@ -1,6 +1,6 @@
 package herencia_empleado;
 
-public class Empleado {
+class Empleado {
     protected String nombre;
     protected String cargo;
     protected String dependencia;
