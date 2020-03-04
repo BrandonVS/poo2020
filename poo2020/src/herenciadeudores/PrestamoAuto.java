@@ -2,8 +2,6 @@ package herenciadeudores;
 
 public class PrestamoAuto extends ClienteDeudor {
     private double auto;
-    private double pagoInicial;
-    private double monto;
 
     /**
      * Metodo constructor para el prestamo automovil

@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee51104a-500e-4c5e-a4f2-255b8fadd182" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/herenciadeudores/ClienteDeudor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/herenciadeudores/EjecutaClienteDeudor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/herenciadeudores/PrestamoAuto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/herenciadeudores/PrestamoHipotecario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/herenciadeudores/PrestamoPersonal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/herenciainversionistas/CuentaAhorro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/herenciainversionistas/CuentaMaestra.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/herenciainversionistas/EjecutaInversionista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/herenciainversionistas/Inversionista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/herenciainversionistas/Pagare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/poo2020/herenciaautomotriz/EjecutaEmpleado.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/poo2020/herenciaautomotriz/EjecutaEmpleado.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/herenciaautomotriz/EjecutaEmpleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/herenciaautomotriz/EjecutaEmpleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/herenciaautomotriz/EmpAdmvo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/herenciaautomotriz/EmpAdmvo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/herenciaautomotriz/EmpMecanico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/herenciaautomotriz/EmpMecanico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/herenciaautomotriz/EmpVendedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/herenciaautomotriz/EmpVendedor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/herenciaautomotriz/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/herenciaautomotriz/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/herenciadeudores/PrestamoAuto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/herenciadeudores/PrestamoAuto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +33,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582912096979" />
@@ -145,7 +131,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582903689715</updated>
-      <workItem from="1583274582035" duration="19229000" />
+      <workItem from="1583274582035" duration="19287000" />
+      <workItem from="1583297949840" duration="5496000" />
     </task>
     <servers />
   </component>
@@ -161,37 +148,37 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583287290200" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1583293737042">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1583294794540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583293737042" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1583293737042">
+    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583294794540" />
+    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1583294794539">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583293737042" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1583293737042">
+    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583294794539" />
+    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1583294794539">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583293737042" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1583293737042">
+    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583294794539" />
+    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1583294794539">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583293737042" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1583276263981">
+    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583294794539" />
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1583294794540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583276263981" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1583276263981">
+    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583294794540" />
+    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1583294794540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583276263981" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1583276263981">
+    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583294794540" />
+    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1583294794540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583276263981" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1583276263981">
+    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583294794540" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1583294794540">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583276263981" />
+    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583294794540" />
   </component>
 </project>
