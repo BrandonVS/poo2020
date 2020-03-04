@@ -20,7 +20,7 @@ public class EjecutaEmpleado {
         int totalEmp = 0;
         double totalQuin = 0;
         String opcion;
-        String cadena = "RFC\tNOMBRE\tDEPTO.\tPUESTO\tSUELDO QUINCENA\n";
+        String cadena = "RFC\t\t\tNOMBRE\t\tDEPTO.\t\tPUESTO\t\tSUELDO QUINCENA\n";
 
         while(bandera){
             System.out.println("Ingrese el tipo de empleado:\n1. Administrativo\n2. Mecanico\n3. Vendedor\n4. Salir");
@@ -43,7 +43,8 @@ public class EjecutaEmpleado {
 
                     EmpAdmvo empAdmvo = new EmpAdmvo(rfc, nombre, departamento, puesto, sueldoMensual);
 
-                    cadena = String.format("%s%s\t%s\t%s\t%s\t%.2f", cadena, empAdmvo.getRfc(), empAdmvo.getNombre(),
+                    cadena = String.format("\n%s%s\t\t%s\t\t%s\t\t%s\t\t%.2f\n", cadena, empAdmvo.getRfc(),
+                            empAdmvo.getNombre(),
                             empAdmvo.getDepartamento(), empAdmvo.getPuesto(), empAdmvo.calcularQuincena());
                     totalEmp = totalEmp + 1;
                     totalQuin = totalQuin + empAdmvo.calcularQuincena();
@@ -66,13 +67,14 @@ public class EjecutaEmpleado {
                     num = scanner.nextInt();
                     System.out.println("Ingrese el costo de cada trabajo: ");
                     for(int i = 0; i < num; i++){
+                        System.out.println("Trabajo numero "+(i+1)+": ");
                         valorTrabajo = scanner.nextDouble();
                         valorTrabajo += valorTrabajo;
                     }
-
+                    scanner.nextLine();
                     EmpMecanico empMecanico = new EmpMecanico(rfc, nombre, departamento, puesto, num, valorTrabajo);
 
-                    cadena = String.format("%s%s\t%s\t%s\t%s\t%.2f", cadena, empMecanico.getRfc(),
+                    cadena = String.format("\n%s%s\t\t%s\t\t%s\t\t%s\t\t%.2f\n", cadena, empMecanico.getRfc(),
                             empMecanico.getNombre(), empMecanico.getDepartamento(), empMecanico.getPuesto(),
                             empMecanico.calcularQuincena());
                     totalEmp = totalEmp + 1;
@@ -92,17 +94,18 @@ public class EjecutaEmpleado {
                     departamento = scanner.nextLine();
                     System.out.println("Ingrese el puesto: ");
                     puesto = scanner.nextLine();
-                    System.out.println("Ingrese el numero de trabajos realizados: ");
+                    System.out.println("Ingrese el numero de ventas realizados: ");
                     num = scanner.nextInt();
-                    System.out.println("Ingrese el costo de cada trabajo: ");
+                    System.out.println("Ingrese el costo de cada venta: ");
                     for(int i = 0; i < num; i++){
+                        System.out.println("Venta numero "+(i+1)+": ");
                         valorVenta = scanner.nextDouble();
                         valorVenta += valorVenta;
                     }
-
+                    scanner.nextLine();
                     EmpVendedor empVendedor = new EmpVendedor(rfc, nombre, departamento, puesto, salario, valorVenta);
 
-                    cadena = String.format("%s%s\t%s\t%s\t%s\t%.2f", cadena, empVendedor.getRfc(),
+                    cadena = String.format("\n%s%s\t\t%s\t\t%s\t\t%s\t\t%.2f\n", cadena, empVendedor.getRfc(),
                             empVendedor.getNombre(), empVendedor.getDepartamento(), empVendedor.getPuesto(),
                             empVendedor.calcularQuincena());
                     totalEmp = totalEmp + 1;
@@ -121,5 +124,7 @@ public class EjecutaEmpleado {
                     break;
             }
         }
+        System.out.print(cadena);
+        System.out.println("TOTAL "+totalEmp+" empleados\t\t\t\t\t\t\t\t"+totalQuin);
     }
 }
