@@ -1,47 +1,52 @@
-package herenciadeudores;
+package polimorfismodeudores;
 
-public class ClienteDeudor {
-    protected int numCli;
-    protected String nom;
+public abstract class ClienteDeudorP {
+    protected int numCl;
+    protected String cliente;
     protected String numCue;
-    protected double prestado;
+    protected double prestamo;
     protected double interes;
     protected int plazo;
-
+    protected double pagar;
     /**
      * Metodo para obtener el numero de cliente
+     *
      * @return numCl
      */
-    public int getNumCli() {
-        return numCli;
+    public int getNumCl() {
+        return numCl;
     }
 
     /**
      * Metodo para actualizar el numero de cliente
-     * @param numCli
+     *
+     * @param numCl
      */
-    public void setNumCli(int numCli) {
-        this.numCli = numCli;
+    public void setNumCl(int numCl) {
+        this.numCl = numCl;
     }
 
     /**
      * Metodo para obtener el nombre
+     *
      * @return nombre
      */
-    public String getNom() {
-        return nom;
+    public String getCliente() {
+        return cliente;
     }
 
     /**
      * Metodo para actualizar el nombre
-     * @param nom
+     *
+     * @param cliente
      */
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setCliente(String cliente) {
+        this.cliente = cliente;
     }
 
     /**
      * Metodo para obtener el numero de cuenta
+     *
      * @return numCue
      */
     public String getNumCue() {
@@ -50,6 +55,7 @@ public class ClienteDeudor {
 
     /**
      * Metodo para actualizar el numero de cuenta
+     *
      * @param numCue
      */
     public void setNumCue(String numCue) {
@@ -58,22 +64,25 @@ public class ClienteDeudor {
 
     /**
      * Metodo para obtener el prestamo
-     * @return
+     *
+     * @return prestamo
      */
-    public double getPrestado() {
-        return prestado;
+    public double getPrestamo() {
+        return prestamo;
     }
 
     /**
      * Metodo para actualizar el prestamo
-     * @param prestado
+     *
+     * @param prestamo
      */
-    public void setPrestado(double prestado) {
-        this.prestado = prestado;
+    public void setPrestamo(double prestamo) {
+        this.prestamo = prestamo;
     }
 
     /**
      * Metodo para obtener el interes
+     *
      * @return interes
      */
     public double getInteres() {
@@ -82,6 +91,7 @@ public class ClienteDeudor {
 
     /**
      * Metodo para actualizar el interes
+     *
      * @param interes
      */
     public void setInteres(double interes) {
@@ -90,6 +100,7 @@ public class ClienteDeudor {
 
     /**
      * Metodo para obtener el plazo
+     *
      * @return plazo
      */
     public int getPlazo() {
@@ -98,9 +109,23 @@ public class ClienteDeudor {
 
     /**
      * Metodo para actualizar el plazo
+     *
      * @param plazo
      */
     public void setPlazo(int plazo) {
         this.plazo = plazo;
     }
+
+    /**
+     * Metodo para obtener lo que se tiene que pagar
+     * @return
+     */
+    public double getPagar() {
+        return pagar;
+    }
+
+    /**
+     * Metodo abstracto para calcular lo que se tiene que pagar
+     */
+    public abstract void calcularPagar();
 }

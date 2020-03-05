@@ -1,26 +1,22 @@
-package herenciavolumen;
-
-import herencia_figura.Cuadrado;
+package polimorfismovolumen;
 
 import java.util.Scanner;
 
-public class EjecutaFigura {
+public class EjecutaFiguraP {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner= new Scanner(System.in);
 
         String nombre;
-        double radio;
-        double altura;
-        double lado;
+        double radio, altura, lado;
         boolean bandera = true;
         int opcion;
 
-        while(bandera){
-            System.out.println("\tCALCULO DEL VOLUMEN DE UNA FIGURA\n\nSeleccione la opcion pertienente\n1. CuboP\n" +
-                    "2. CilindroP\n3. Cono\n4. Esfera\n5. Salir\n");
+        while(bandera) {
+            System.out.println("\tCALCULO DEL VOLUMEN DE UNA FIGURA\n\nSeleccione la opcion pertienente\n1. Cubo\n" +
+                    "2. Cilindro\n3. Cono\n4. Esfera\n5. Salir\n");
             opcion = scanner.nextInt();
             scanner.nextLine();
-            switch (opcion){
+            switch (opcion) {
                 case 1:
                     System.out.println("Ingrese el nombre de la figura: ");
                     nombre = scanner.nextLine();
@@ -28,11 +24,12 @@ public class EjecutaFigura {
                     System.out.println("Ingrse el lado: ");
                     lado = scanner.nextDouble();
 
-                    Cubo cubo = new Cubo(nombre, lado);
+                    CuboP cuboP = new CuboP(nombre, lado);
+                    cuboP.calcularVolu();
 
                     System.out.println("----------------------------");
-                    System.out.printf("\n\tEl volumen de la figura %s es %.2f\t\n", cubo.getNombre(),
-                            cubo.calcularVolumen());
+                    System.out.printf("\n\tEl volumen de la figura %s es %.2f\t\n", cuboP.getNomb(),
+                            cuboP.getVolu());
                     System.out.println("----------------------------");
                     break;
                 case 2:
@@ -45,11 +42,12 @@ public class EjecutaFigura {
                     System.out.println("Ingrese el radio: ");
                     radio = scanner.nextDouble();
 
-                    Cilindro cilindro = new Cilindro(nombre, radio, altura);
+                    CilindroP cilindroP = new CilindroP(nombre, radio, altura);
+                    cilindroP.calcularVolu();
 
                     System.out.println("-----------------------------");
-                    System.out.printf("\n\tEl volumen de la figura %s es %.2f\t\n", cilindro.getNombre(),
-                            cilindro.calcularVolumen());
+                    System.out.printf("\n\tEl volumen de la figura %s es %.2f\t\n", cilindroP.getNomb(),
+                            cilindroP.getVolu());
                     System.out.println("-----------------------------");
                     break;
                 case 3:
@@ -62,11 +60,12 @@ public class EjecutaFigura {
                     System.out.println("Ingrese le radio: ");
                     radio = scanner.nextDouble();
 
-                    Cono cono = new Cono(nombre, radio, altura);
+                    ConoP conoP = new ConoP(nombre, radio, altura);
+                    conoP.calcularVolu();
 
                     System.out.println("-----------------------------");
-                    System.out.printf("\n\tEl volumen de la figura %s es %.2f\t\n", cono.getNombre(),
-                            cono.calcularVolumen());
+                    System.out.printf("\n\tEl volumen de la figura %s es %.2f\t\n", conoP.getNomb(),
+                            conoP.getVolu());
                     System.out.println("-----------------------------");
                     break;
                 case 4:
@@ -76,11 +75,12 @@ public class EjecutaFigura {
                     System.out.println("Ingrese el radio: ");
                     radio = scanner.nextDouble();
 
-                    Esfera esfera = new Esfera(nombre, radio);
+                    EsferaP esferaP = new EsferaP(nombre, radio);
+                    esferaP.calcularVolu();
 
                     System.out.println("------------------------------");
-                    System.out.printf("El volumen de la figura %s es %.2f\t\n", esfera.getNombre(),
-                            esfera.calcularVolumen());
+                    System.out.printf("El volumen de la figura %s es %.2f\t\n", esferaP.getNomb(),
+                            esferaP.getVolu());
                     System.out.println("------------------------------");
                     break;
                 case 5:

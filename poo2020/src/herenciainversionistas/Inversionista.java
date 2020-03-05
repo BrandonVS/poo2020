@@ -9,7 +9,7 @@ public class Inversionista {
 
     /**
      * Metodo para obtener el numero de cliente
-     * @return numCli
+     * @return numCl
      */
     public int getNumCli() {
         return numCli;
