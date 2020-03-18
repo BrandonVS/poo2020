@@ -4,25 +4,15 @@ package puntodeventa;
  *
  * @author BrandonVS
  */
-public class Producto {
-    private String nombre;
-    private String unidad;
-    private double cantidad;
-    private double precio;
+public abstract class Producto {
 
-    /**
-     * @param nombre
-     * @param unidad
-     * @param cantidad
-     * @param precio 
-     */
-    public Producto(String nombre, String unidad, double cantidad, 
-            double precio) {
-        this.nombre = nombre;
-        this.unidad = unidad;
-        this.cantidad = cantidad;
-        this.precio = precio;
-    }
+    protected String nombre;
+    protected String unidad;
+    protected double cantidad;
+    protected double precio;
+    protected double total;
+    protected double iva;
+    protected double totalIva;
 
     /**
      * @return the nombre
@@ -72,11 +62,18 @@ public class Producto {
     public double getPrecio() {
         return precio;
     }
+
     /**
-     * @param precio 
+     * @param precio
      */
-    public void setPrecio(double precio){
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    public double getTotal(){
+        return total;
+    }
+    
+    public abstract void calcularTotal();
     
 }
