@@ -1,4 +1,4 @@
-package puntodeventa;
+package proyectopoo;
 
 /**
  *
@@ -76,4 +76,15 @@ public abstract class Producto {
     
     public abstract void calcularTotal();
     
+    public double getIva(){
+        return iva;
+    }
+    
+    public abstract void calcularIva();
+    
+    public double getTotalIva(){
+        return totalIva;
+    }
+    
+    public abstract void calcularTotalIva();
 }

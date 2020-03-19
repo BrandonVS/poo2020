@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package puntodeventa;
+package proyectopoo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,12 +14,13 @@ import java.util.List;
  */
 public class Venta extends javax.swing.JFrame {
 
-    static List<Producto> productos = new ArrayList<Producto>();
+    static List<Producto> producto = new ArrayList<Producto>();
     /**
      * Creates new form Venta
      */
     public Venta() {
         initComponents();
+        
     }
 
     /**
@@ -234,16 +235,18 @@ public class Venta extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(prodUnidad, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jLabel5)
+                                .addComponent(jLabel3)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(prodNombre)
                             .addComponent(prodCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(prodPrecio)
-                            .addComponent(jLabel7))))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(prodPrecio)
+                                .addComponent(jLabel7)))))
                 .addGap(69, 69, 69)
                 .addComponent(compra)
                 .addGap(18, 18, 18)
@@ -294,33 +297,46 @@ public class Venta extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_buscarActionPerformed
-
+        
     private void atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasActionPerformed
         Menu objMenu = new Menu();
-        
+        Reporte reporte = new Reporte("","",0,0);
+        reporte.calcularTotal();
+        reporte.calcularIva();
+        reporte.calcularTotalIva();
         objMenu.show();
         dispose();
     }//GEN-LAST:event_atrasActionPerformed
 
     private void compraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_compraActionPerformed
+
+        String nombreBuscar = txtbuscar.getText();
         String nombre = prodNombre.getText();
         String unidad = prodUnidad.getText();
         double cantidad = Double.parseDouble(txtcantidad.getText());
+        double cant = Double.parseDouble(prodCantidad.getText());
         double precio = Double.parseDouble(prodPrecio.getText());
         Reporte reporte = new Reporte(nombre, unidad, cantidad, precio);
-        productos.add(reporte);
+        producto.add(reporte);
         reporte.calcularTotal();
-        total();
-        ivatxt.setText(String.valueOf(Double.parseDouble(totaltxt.getText())*0.12));
-        totalivatxt.setText(String.valueOf(Double.parseDouble(totaltxt.getText())+Double.parseDouble(ivatxt.getText())));
+        reporte.calcularIva();
+        reporte.calcularTotalIva();
+        totaltxt.setText(String.valueOf(reporte.getTotal() + 
+                Double.parseDouble(totaltxt.getText())));
+        ivatxt.setText(String.valueOf(reporte.getIva() + 
+                Double.parseDouble(ivatxt.getText())));
+        totalivatxt.setText(String.valueOf(reporte.getTotalIva() + 
+                Double.parseDouble(totalivatxt.getText())));
         visualizarLista();
         limpiar();
+        prodCantidad.setText(String.valueOf(cant - cantidad));
+        
     }//GEN-LAST:event_compraActionPerformed
-
+   
     public void visualizarLista(){
-        String[] prodNombres = new String[productos.size()];
+        String[] prodNombres = new String[producto.size()];
         int i = 0;
-        for(Producto producto: productos){
+        for(Producto producto: producto){
             producto.calcularTotal();
             prodNombres[i] = producto.getNombre()+"        "+
                     txtcantidad.getText()+producto.getUnidad()+"        "+
@@ -328,16 +344,6 @@ public class Venta extends javax.swing.JFrame {
             i++;
         }
         lista.setListData(prodNombres);
-    }
-    
-    public void total(){
-        double total = 0;
-        String[] prodNombres = new String[productos.size()];
-        int i = 0;
-        for(Producto producto: productos){
-            total += producto.getTotal();
-        }
-        totaltxt.setText(String.valueOf(total));
     }
     
     public void limpiar(){
@@ -382,7 +388,7 @@ public class Venta extends javax.swing.JFrame {
     private javax.swing.JButton atras;
     private javax.swing.JButton buscar;
     private javax.swing.JButton compra;
-    private javax.swing.JLabel ivatxt;
+    protected javax.swing.JLabel ivatxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -395,14 +401,14 @@ public class Venta extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList lista;
+    protected javax.swing.JList lista;
     private javax.swing.JLabel prodCantidad;
     private javax.swing.JLabel prodNombre;
     private javax.swing.JLabel prodPrecio;
     private javax.swing.JLabel prodUnidad;
     private javax.swing.JButton salir;
-    private javax.swing.JLabel totalivatxt;
-    private javax.swing.JLabel totaltxt;
+    protected javax.swing.JLabel totalivatxt;
+    protected javax.swing.JLabel totaltxt;
     private javax.swing.JTextField txtbuscar;
     private javax.swing.JTextField txtcantidad;
     // End of variables declaration//GEN-END:variables

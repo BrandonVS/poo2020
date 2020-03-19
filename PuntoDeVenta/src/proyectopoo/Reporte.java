@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package puntodeventa;
+package proyectopoo;
 
 /**
  *
  * @author Brandon
  */
 public class Reporte extends Producto{
-    private String factura;
-    private int i = 0;
+
     public Reporte(String nombre, String unidad, double cantidad, 
             double precio){
         this.nombre = nombre;
@@ -22,5 +21,13 @@ public class Reporte extends Producto{
     
     public void calcularTotal(){
         total = precio * cantidad;
+    }
+    
+    public void calcularIva(){
+        iva = total * 0.12;
+    }
+    
+    public void calcularTotalIva(){
+        totalIva = total + iva;
     }
 }

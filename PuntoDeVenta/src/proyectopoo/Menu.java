@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package puntodeventa;
-
+package proyectopoo;
+import javax.swing.DefaultListModel;
 /**
  *
  * @author utpl
  */
 public class Menu extends javax.swing.JFrame {
-
     /**
      * Creates new form Menu
      */
@@ -97,7 +96,9 @@ public class Menu extends javax.swing.JFrame {
 
     private void venderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_venderActionPerformed
         Venta objVenta = new Venta();
-        
+        objVenta.totaltxt.setText(String.valueOf(0));
+        objVenta.ivatxt.setText(String.valueOf(0));
+        objVenta.totalivatxt.setText(String.valueOf(0));
         objVenta.show();
         dispose();
     }//GEN-LAST:event_venderActionPerformed
